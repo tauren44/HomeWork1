@@ -1,5 +1,7 @@
 package practice.sorting;
 
+import java.util.Random;
+
 public class SortTest {
     public static void main(String[] args) {
 
@@ -23,9 +25,10 @@ public class SortTest {
         BucketSort.sort(numbers5);
         SortUtil.print(numbers5);
 
+        Random random = new Random();
         int[] speedTest = new int[1_000_000];
-        for(int i = 999999; i >= 0; i--) {
-            speedTest[i] = i;
+        for (int i = 0; i < speedTest.length; i++) {
+            speedTest[i] = random.nextInt(40);
         }
 
         long before = System.currentTimeMillis();
