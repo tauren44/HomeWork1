@@ -10,7 +10,7 @@ public class BucketSort {
         for (i = 0; i < numbers.length; i++) {
             bucket[numbers[i]]++;
         }
-        int k=0;
+        int k = 0;
         for (i = 0; i < bucket.length; i++) {
             for (j = 0; j < bucket[i]; j++) {
                 numbers[k++] = i;
@@ -18,13 +18,13 @@ public class BucketSort {
         }
     }
 
-     private static int maxValue(int [] array) {
+    private static int maxValue(int[] array) {
         int maxValue = 0;
-         for (int item : array) {
-             if (item > maxValue) {
-                 maxValue = item;
-             }
-         }
+        for (int item : array) {
+            if (item > maxValue) {
+                maxValue = item;
+            }
+        }
         return maxValue;
     }
 }

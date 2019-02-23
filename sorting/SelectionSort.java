@@ -3,8 +3,8 @@ package practice.sorting;
 public class SelectionSort {
 
     public static void sort(int[] numbers) {
-        for (int temp = 0; temp <= numbers.length-1; temp++) {
-            SortUtil.swap(numbers, temp, getSmallest(numbers, temp, numbers.length-1));
+        for (int temp = 0; temp <= numbers.length - 1; temp++) {
+            SortUtil.swap(numbers, temp, getSmallest(numbers, temp, numbers.length - 1));
         }
     }
 

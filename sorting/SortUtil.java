@@ -4,7 +4,7 @@ import java.util.Random;
 
 public class SortUtil {
 
-     public static void swap(int[] numbers, int i, int j) {
+    public static void swap(int[] numbers, int i, int j) {
         int temp = numbers[i];
         numbers[i] = numbers[j];
         numbers[j] = temp;

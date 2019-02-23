@@ -12,6 +12,6 @@ public class Series {
     }
 
     public static int getFactorial(int number) {
-            return (number == 1 || number == 0) ? 1 : getFactorial(number - 1) * number;
-        }
+        return (number == 1 || number == 0) ? 1 : getFactorial(number - 1) * number;
     }
+}
