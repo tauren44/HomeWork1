@@ -25,25 +25,29 @@ public class SortTest {
         BucketSort.sort(numbers5);
         SortUtil.print(numbers5);
 
-        Random random = new Random();
-        int[] speedTest = new int[1_000_000];
-        for (int i = 0; i < speedTest.length; i++) {
-            speedTest[i] = random.nextInt(40);
-        }
-
         long before = System.currentTimeMillis();
-
-        //SelectionSort.sort(speedTest);
-        //InsertionSort.sort(speedTest);
-        //HeapSort.sort(speedTest);
-        //ShellSort.sort(speedTest);
-        BucketSort.sort(speedTest);
-
+        BucketSort.sort(SortUtil.getRandomInts());
         long after = System.currentTimeMillis();
-        System.out.println(after - before + " ms.");
+        System.out.println("BucketSort: " + (after - before) + " ms.");
 
+        before = System.currentTimeMillis();
+        SelectionSort.sort(SortUtil.getRandomInts());
+        after = System.currentTimeMillis();
+        System.out.println("SelectionSort: " + (after - before) + " ms.");
+
+        before = System.currentTimeMillis();
+        InsertionSort.sort(SortUtil.getRandomInts());
+        after = System.currentTimeMillis();
+        System.out.println("InsertionSort: " + (after - before) + " ms.");
+
+        before = System.currentTimeMillis();
+        HeapSort.sort(SortUtil.getRandomInts());
+        after = System.currentTimeMillis();
+        System.out.println("HeapSort: " + (after - before) + " ms.");
+
+        before = System.currentTimeMillis();
+        ShellSort.sort(SortUtil.getRandomInts());
+        after = System.currentTimeMillis();
+        System.out.println("ShellSort: " + (after - before) + " ms.");
     }
-
-
-
 }

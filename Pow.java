@@ -7,10 +7,9 @@ public class Pow {
         System.out.println(pow(5, 4));
         System.out.println(pow(5, 0));
         System.out.println(pow(5, -1));
-
     }
 
-    private static double pow(double base, double exponent) {
+    private static double pow(int base, int exponent) {
         if (exponent > 0) {
             double result = 1;
             for (int a = 0; a < exponent; a++) {
